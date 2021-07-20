@@ -7,6 +7,7 @@ This document steps through the process of generating, deploying and testing a m
 - [NodeJS](https://nodejs.org/en/) LTS version or above.
 - [Apigee Sackmesser](https://github.com/apigee/devrel/tree/main/tools/apigee-sackmesser)
 - [apigeecli](https://github.com/srinandan/apigeecli)
+- [git](https://git-scm.com/)
 
 ## Generate, Deploy and Test a Mock Proxy
 
