@@ -10,6 +10,7 @@ This document steps through the process of generating, deploying and testing a m
 - [apigeecli](https://github.com/srinandan/apigeecli)
 - [git](https://git-scm.com/)
 - [jq](https://stedolan.github.io/jq/)
+- Bash (Unix shell)
 
 ## Generate, Deploy and Test a Mock Proxy
 
