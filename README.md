@@ -46,6 +46,9 @@ before(function () {
 ```
 
 6. Update the test suite with your proxy name.
+```
+sed -i 's/oas-apigee-mock-orders-apikey-header/web-orders-proxy-v1/' test/features/orders-apikey-header.feature
+```
 
 7. Run the test suite and verify it fails.
 ```
