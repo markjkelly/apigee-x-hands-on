@@ -5,7 +5,7 @@ This document steps through the process of generating, deploying and testing a m
 ## Prerequisites
 - An Apigee X organisation configured for external exposure. See [here](https://github.com/apigee/devrel/tree/main/tools/apigee-x-trial-provision) for details on provisioning an evaluation organisation.
 - [NodeJS](https://nodejs.org/en/) LTS version or above.
-- [gCloud](https://cloud.google.com/sdk/docs/install)
+- [gcloud](https://cloud.google.com/sdk/docs/install)
 - [Apigee Sackmesser](https://github.com/apigee/devrel/tree/main/tools/apigee-sackmesser)
 - [apigeecli](https://github.com/srinandan/apigeecli)
 - [git](https://git-scm.com/)
