@@ -41,7 +41,7 @@ echo '<APIProxy name="web-orders-proxy-v1"/>' > api_bundles/web-orders-proxy/api
 ```
 before(function () {
   this.apickli = new apickli.Apickli(
-    "https",$RUNTIME_HOST_ALIAS
+    "https",process.env.RUNTIME_HOST_ALIAS
   );
 ```
 
