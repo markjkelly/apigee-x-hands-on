@@ -35,10 +35,12 @@ node bin/oas-apigee-mock generateApi web-orders-proxy-v1 -s test/oas/orders-apik
 echo '<APIProxy name="web-orders-proxy-v1"/>' > api_bundles/web-orders-proxy/apiproxy/web-orders-proxy-v1.xml
 ```
 
-5. Update the init.js file with your Organisation's hostname. This will be your `RUNTIME_HOST_ALIAS` if you followed the [Apigee X Trial Provisioning](https://github.com/apigee/devrel/tree/main/tools/apigee-x-trial-provision) script.
+5. Update test/features/step_definitions/init.js with your Organisation's hostname. This will be your `RUNTIME_HOST_ALIAS` if you followed the [Apigee X Trial Provisioning](https://github.com/apigee/devrel/tree/main/tools/apigee-x-trial-provision) script.
 ```
-Update devrel/tools/oas-apigee-mock/test/features/step_definitions/init.js
-    "https","$RUNTIME_HOST_ALIAS"
+before(function () {
+  this.apickli = new apickli.Apickli(
+    "https",$RUNTIME_HOST_ALIAS
+  );
 ```
 
 6. Run test suite and verify it fails.
