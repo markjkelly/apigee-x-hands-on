@@ -19,6 +19,7 @@ This document steps through the process of generating, deploying and testing a m
 export TOKEN=$(gcloud auth application-default print-access-token)
 export APIGEE_ENV=<apigee-environment-name>
 export APIGEE_ORG=<gcp-project-name>
+export RUNTIME_HOST_ALIAS=<your-runtime-host-alias>
 ```
 
 2. Clone the Apigee DevRel repo and install the dependencies for the oas-apigee-mock tool. 
