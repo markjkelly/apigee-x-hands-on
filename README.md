@@ -35,7 +35,7 @@ node bin/oas-apigee-mock generateApi web-orders-proxy-v1 -s test/oas/orders-apik
 
 4. Add a base configuration file to the generated bundle. This step will not be required once issue [338](https://github.com/apigee/devrel/issues/338) is resolved.
 ```
-echo '<APIProxy name="web-orders-proxy-v1"/>' > api_bundles/web-orders-proxy/apiproxy/web-orders-proxy-v1.xml
+echo '<APIProxy name="web-orders-proxy-v1"/>' > api_bundles/web-orders-proxy-v1/apiproxy/web-orders-proxy-v1.xml
 ```
 
 5. Update the `before(function ()` block in `test/features/step_definitions/init.js` with your organisation's hostname. This will be your `RUNTIME_HOST_ALIAS` if you followed the [Apigee X Trial Provisioning](https://github.com/apigee/devrel/tree/main/tools/apigee-x-trial-provision) script.
