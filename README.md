@@ -5,12 +5,13 @@ This document steps through the process of generating, deploying and testing a m
 ## Prerequisites
 - An Apigee X organisation configured for external exposure. See [here](https://github.com/apigee/devrel/tree/main/tools/apigee-x-trial-provision) for details on provisioning an evaluation organisation.
 - [NodeJS](https://nodejs.org/en/) LTS version or above.
+- Bash (Unix shell)
 - [gcloud](https://cloud.google.com/sdk/docs/install)
+- [git](https://git-scm.com/)
 - [Apigee Sackmesser](https://github.com/apigee/devrel/tree/main/tools/apigee-sackmesser)
 - [apigeecli](https://github.com/srinandan/apigeecli)
-- [git](https://git-scm.com/)
+- [oas-apigee-mock](https://github.com/apigee/devrel/tree/main/tools/oas-apigee-mock)
 - [jq](https://stedolan.github.io/jq/)
-- Bash (Unix shell)
 
 ## Generate, Deploy and Test a Mock Proxy
 
