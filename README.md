@@ -13,7 +13,7 @@ This document steps through the process of generating, deploying and testing a m
 - [oas-apigee-mock](https://github.com/apigee/devrel/tree/main/tools/oas-apigee-mock)
 - [jq](https://stedolan.github.io/jq/)
 
-## Generate, Deploy and Test a Mock Proxy
+## Generate, Deploy and Test a Mock Proxy on Apigee X
 
 1. First you will need to set up some environment variables.
 ```sh
