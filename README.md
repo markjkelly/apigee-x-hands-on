@@ -35,12 +35,7 @@ npm install
 node bin/oas-apigee-mock generateApi web-orders-proxy-v1 -s test/oas/orders-apikey-header.yaml -o
 ```
 
-4. Add a base configuration file to the generated bundle. This step will not be required once issue [338](https://github.com/apigee/devrel/issues/338) is resolved.
-```
-echo '<APIProxy name="web-orders-proxy-v1"/>' > api_bundles/web-orders-proxy-v1/apiproxy/web-orders-proxy-v1.xml
-```
-
-5. Update the `before(function ()` block in `test/features/step_definitions/init.js` with your organisation's hostname. This will be your `RUNTIME_HOST_ALIAS` if you followed the [Apigee X Trial Provisioning](https://github.com/apigee/devrel/tree/main/tools/apigee-x-trial-provision) script.
+4. Update the `before(function ()` block in `test/features/step_definitions/init.js` with your organisation's hostname. This will be your `RUNTIME_HOST_ALIAS` if you followed the [Apigee X Trial Provisioning](https://github.com/apigee/devrel/tree/main/tools/apigee-x-trial-provision) script.
 ```
 before(function () {
   this.apickli = new apickli.Apickli(
@@ -48,27 +43,27 @@ before(function () {
   );
 ```
 
-6. Update the test suite with your proxy name.
+5. Update the test suite with your proxy name.
 ```
 sed -i 's/oas-apigee-mock-orders-apikey-header/web-orders-proxy-v1/' test/features/orders-apikey-header.feature
 ```
 
-7. Run the test suite and verify it fails.
+6. Run the test suite and verify it fails.
 ```
 ./node_modules/.bin/cucumber-js test/features/orders-apikey-header.feature --format json:test/test_report.json --publish-quiet
 ```
 
-8. Deploy your mock proxy to your Organisation.
+7. Deploy your mock proxy to your Organisation.
 ```
 sackmesser deploy -d "$PWD/api_bundles/web-orders-proxy-v1" --googleapi -t "$TOKEN" -o "$APIGEE_ORG" -e "$APIGEE_ENV"
 ```
 
-9. Turn on trace, run test suite and verify it fails.
+8. Turn on trace, run test suite and verify it fails.
 ```
 ./node_modules/.bin/cucumber-js test/features/orders-apikey-header.feature --format json:test/test_report.json --publish-quiet
 ```
 
-10. Create a developer, app and product to test the proxy.
+9. Create a developer, app and product to test the proxy.
 ```
 apigeecli products create -t "$TOKEN" -o "$APIGEE_ORG" --name "web-orders" --proxies "web-orders-proxy-v1" --envs "$APIGEE_ENV" --approval "auto"
 apigeecli devs create -t "$TOKEN" -o "$APIGEE_ORG" --email "web-orders@example.com" --user "web-orders@example.com" --first "Web" --last "Developer"
@@ -79,7 +74,7 @@ export APIKEY
 echo "APIKEY is $APIKEY"
 ```
 
-11. Turn on trace, run test suite and verify it now passes.
+10. Turn on trace, run test suite and verify it now passes.
 ```
 ./node_modules/.bin/cucumber-js test/features/orders-apikey-header.feature --format json:test/test_report.json --publish-quiet
 ```
