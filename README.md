@@ -1,3 +1,5 @@
+## Note: This content has been migrated to CodeLab format and is now being maintained as part of the [Apigee DevRel](https://github.com/apigee/devrel/blob/main/labs/bdd-proxy-development/lab.md) repo.
+
 # apigee-x-hands-on
 
 This document steps through the process of generating, deploying and testing a mock proxy on Apigee X, based on an Open API specification.
